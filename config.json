@@ -17,8 +17,8 @@
         "rp": true
     },
     "authorizedRoles": [
-        "Botu Kontrol Eden Rol İd",
-        "ROL_ID_2_BURAYA",
+        "1465811031354769662",
+        "1465811032340562043",
         "ROL_ID_3_BURAYA",
         "ROL_ID_4_BURAYA",
         "ROL_ID_5_BURAYA",
@@ -28,50 +28,43 @@
         "ROL_ID_9_BURAYA",
         "ROL_ID_10_BURAYA"
     ],
-    "logChannelId": "log kanal id",
-    "ticketLogChannelId": "ticket log kanal id",
-    "reactionMessageId": "reaksiyon measaje kanal id",
+    "logChannelId": "1465811187878072330",
+    "ticketLogChannelId": "1466195128409653511",
+    "reactionMessageId": "",
     "autoMod": {
         "spamThreshold": 5,
         "spamInterval": 5000,
         "linkWhitelist": [
-            "Beyaz Liste Link",
-            "Beyaz Liste Link"
+            "https://discord.gg/f2seHdCMRe",
+            "https://discord.gg/CNdehqjcmg",
+            "https://www.instagram.com/rgrafikpaketi584/",
+            "https://www.youtube.com/@roleplaygrafikpaketi8311",
+            "link5.com",
+            "link6.com",
+            "link7.com"
         ],
         "enabled": true
     },
     "reactionRoles": [
         {
             "emoji": "🔴",
-            "role": "ROL_ID_1"
+            "role": "1465811048253755543"
         },
         {
             "emoji": "🔵",
-            "role": "ROL_ID_2"
+            "role": "1466185914169557012"
         },
         {
             "emoji": "🟢",
-            "role": "ROL_ID_3"
+            "role": "1466220352538546279"
         },
         {
             "emoji": "🟡",
-            "role": "ROL_ID_4"
+            "role": "1470000934758121527"
         },
         {
             "emoji": "🟣",
-            "role": "ROL_ID_5"
-        },
-        {
-            "emoji": "🟠",
-            "role": "ROL_ID_6"
-        },
-        {
-            "emoji": "⚪",
-            "role": "ROL_ID_7"
-        },
-        {
-            "emoji": "⚫",
-            "role": "ROL_ID_8"
+            "role": "1466229872891400427"
         }
     ],
     "filter": [
@@ -79,31 +72,31 @@
     ],
     "translator": {
         "allowedChannels": [
-            "çeviri yapılıcak kanal id",
-            "KANAL_ID_2",
-            "KANAL_ID_3",
-            "KANAL_ID_4",
-            "KANAL_ID_5",
-            "KANAL_ID_6",
-            "KANAL_ID_7",
-            "KANAL_ID_8",
-            "KANAL_ID_9",
-            "KANAL_ID_10",
-            "KANAL_ID_11",
-            "KANAL_ID_12",
-            "KANAL_ID_13",
-            "KANAL_ID_14",
-            "KANAL_ID_15",
-            "KANAL_ID_16",
-            "KANAL_ID_17",
-            "KANAL_ID_18",
-            "KANAL_ID_19",
-            "KANAL_ID_20",
-            "KANAL_ID_21",
-            "KANAL_ID_22",
-            "KANAL_ID_23",
-            "KANAL_ID_24",
-            "KANAL_ID_25",
+            "1466188711464272141",
+            "1465811117782597672",
+            "1465811121079455786",
+            "1465811125718483006",
+            "1465811133028892693",
+            "1465811136833261863",
+            "1466204955160613017",
+            "1466204980414386186",
+            "1466205002472100063",
+            "1466205021589733537",
+            "1466187487935336563",
+            "1466203120135835678",
+            "1466203999505219829",
+            "1466204084292948093",
+            "1466204098297593907",
+            "1466221235321966592",
+            "1466221311625003189",
+            "1466221497457709063",
+            "1470002206769025095",
+            "1466230481560539136",
+            "1466230624888164590",
+            "1465818258581098718",
+            "1466187061835993149",
+            "1466222199198322930",
+            "1466220018252517487",
             "KANAL_ID_26",
             "KANAL_ID_27",
             "KANAL_ID_28",
