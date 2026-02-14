@@ -1,0 +1,134 @@
+{
+    "client": {
+        "id": "bot client id"
+    },
+    "guild": {
+        "id": "sunucu id"
+    },
+    "styling": {
+        "embedColor": "#8a2be2",
+        "errorColor": "#ff4d4d",
+        "successColor": "#2ecc71"
+    },
+    "modules": {
+        "moderation": true,
+        "economy": true,
+        "ticketing": true,
+        "rp": true
+    },
+    "authorizedRoles": [
+        "Botu Kontrol Eden Rol İd",
+        "ROL_ID_2_BURAYA",
+        "ROL_ID_3_BURAYA",
+        "ROL_ID_4_BURAYA",
+        "ROL_ID_5_BURAYA",
+        "ROL_ID_6_BURAYA",
+        "ROL_ID_7_BURAYA",
+        "ROL_ID_8_BURAYA",
+        "ROL_ID_9_BURAYA",
+        "ROL_ID_10_BURAYA"
+    ],
+    "logChannelId": "log kanal id",
+    "ticketLogChannelId": "ticket log kanal id",
+    "reactionMessageId": "reaksiyon measaje kanal id",
+    "autoMod": {
+        "spamThreshold": 5,
+        "spamInterval": 5000,
+        "linkWhitelist": [
+            "Beyaz Liste Link",
+            "Beyaz Liste Link"
+        ],
+        "enabled": true
+    },
+    "reactionRoles": [
+        {
+            "emoji": "🔴",
+            "role": "ROL_ID_1"
+        },
+        {
+            "emoji": "🔵",
+            "role": "ROL_ID_2"
+        },
+        {
+            "emoji": "🟢",
+            "role": "ROL_ID_3"
+        },
+        {
+            "emoji": "🟡",
+            "role": "ROL_ID_4"
+        },
+        {
+            "emoji": "🟣",
+            "role": "ROL_ID_5"
+        },
+        {
+            "emoji": "🟠",
+            "role": "ROL_ID_6"
+        },
+        {
+            "emoji": "⚪",
+            "role": "ROL_ID_7"
+        },
+        {
+            "emoji": "⚫",
+            "role": "ROL_ID_8"
+        }
+    ],
+    "filter": [
+        "amk"
+    ],
+    "translator": {
+        "allowedChannels": [
+            "çeviri yapılıcak kanal id",
+            "KANAL_ID_2",
+            "KANAL_ID_3",
+            "KANAL_ID_4",
+            "KANAL_ID_5",
+            "KANAL_ID_6",
+            "KANAL_ID_7",
+            "KANAL_ID_8",
+            "KANAL_ID_9",
+            "KANAL_ID_10",
+            "KANAL_ID_11",
+            "KANAL_ID_12",
+            "KANAL_ID_13",
+            "KANAL_ID_14",
+            "KANAL_ID_15",
+            "KANAL_ID_16",
+            "KANAL_ID_17",
+            "KANAL_ID_18",
+            "KANAL_ID_19",
+            "KANAL_ID_20",
+            "KANAL_ID_21",
+            "KANAL_ID_22",
+            "KANAL_ID_23",
+            "KANAL_ID_24",
+            "KANAL_ID_25",
+            "KANAL_ID_26",
+            "KANAL_ID_27",
+            "KANAL_ID_28",
+            "KANAL_ID_29",
+            "KANAL_ID_30",
+            "KANAL_ID_31",
+            "KANAL_ID_32",
+            "KANAL_ID_33",
+            "KANAL_ID_34",
+            "KANAL_ID_35",
+            "KANAL_ID_36",
+            "KANAL_ID_37",
+            "KANAL_ID_38",
+            "KANAL_ID_39",
+            "KANAL_ID_40",
+            "KANAL_ID_41",
+            "KANAL_ID_42",
+            "KANAL_ID_43",
+            "KANAL_ID_44",
+            "KANAL_ID_45",
+            "KANAL_ID_46",
+            "KANAL_ID_47",
+            "KANAL_ID_48",
+            "KANAL_ID_49",
+            "KANAL_ID_50"
+        ]
+    }
+}

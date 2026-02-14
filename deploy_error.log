@@ -1,0 +1,352 @@
+{
+  "requestBody": {
+    "json": [
+      {
+        "options": [
+          {
+            "name": "kullanici",
+            "description": "Rol verilecek kullanıcı",
+            "required": true,
+            "type": 6
+          },
+          {
+            "name": "rol",
+            "description": "Verilecek rol",
+            "required": true,
+            "type": 8
+          }
+        ],
+        "name": "rol-ver",
+        "description": "Bir kullanıcıya belirtilen rolü verir.",
+        "default_member_permissions": "268435456",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "name": "kullanici",
+            "description": "Yasaklanacak kullanıcı",
+            "required": true,
+            "type": 6
+          },
+          {
+            "type": 3,
+            "name": "sebep",
+            "description": "Yasaklama sebebi",
+            "required": false
+          }
+        ],
+        "name": "ban",
+        "description": "Bir kullanıcıyı sunucudan yasaklar.",
+        "default_member_permissions": "4",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "max_value": 100,
+            "min_value": 1,
+            "type": 4,
+            "name": "miktar",
+            "description": "Silinecek mesaj sayısı (1-100)",
+            "required": true
+          }
+        ],
+        "name": "temizle",
+        "description": "Belirtilen miktarda mesajı siler.",
+        "default_member_permissions": "8192",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "type": 1,
+            "name": "ekle",
+            "description": "Filtreye kelime ekler.",
+            "options": [
+              {
+                "type": 3,
+                "name": "kelime",
+                "description": "Eklenecek kelime",
+                "required": true
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "sil",
+            "description": "Filtreden kelime siler.",
+            "options": [
+              {
+                "type": 3,
+                "name": "kelime",
+                "description": "Silinecek kelime",
+                "required": true
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "name": "liste",
+            "description": "Filtrelenen kelimeleri listeler.",
+            "options": []
+          }
+        ],
+        "name": "filtre",
+        "description": "Küfür filtresini yönetir.",
+        "default_member_permissions": "32",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "name": "kullanici",
+            "description": "Atılacak kullanıcı",
+            "required": true,
+            "type": 6
+          },
+          {
+            "type": 3,
+            "name": "sebep",
+            "description": "Atılma sebebi",
+            "required": false
+          }
+        ],
+        "name": "kick",
+        "description": "Bir kullanıcıyı sunucudan atar.",
+        "default_member_permissions": "2",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "name": "kullanici",
+            "description": "Susturulacak kullanıcı",
+            "required": true,
+            "type": 6
+          },
+          {
+            "type": 4,
+            "name": "sure",
+            "description": "Süre (Dakika cinsinden)",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "sebep",
+            "description": "Susturma sebebi",
+            "required": false
+          }
+        ],
+        "name": "mute",
+        "description": "Bir kullanıcıyı belirli bir süre susturur (Timeout).",
+        "default_member_permissions": "1099511627776",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "name": "kanal",
+            "description": "Önerilerin gönderileceği kanal (Opsiyonel: Girilmezse bu kanalı ayarlar)",
+            "required": false,
+            "type": 7
+          }
+        ],
+        "name": "oneri-ayarla",
+        "description": "Öneri kanalını ayarlar.",
+        "default_member_permissions": "8",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "aktif",
+        "description": "Sunucunun aktif olduğunu duyurur.",
+        "default_member_permissions": "8",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "duyuru",
+        "description": "Şık bir embed ile duyuru hazırlamanızı sağlar (Modal açar).",
+        "default_member_permissions": "131072",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "type": 3,
+            "name": "mesaj_id",
+            "description": "Sonlandırılacak çekilişin mesaj ID'si",
+            "required": true
+          }
+        ],
+        "name": "cekilis-bitir",
+        "description": "Devam eden bir çekilişi erken sonlandırır.",
+        "default_member_permissions": "8589934592",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "type": 3,
+            "name": "odul",
+            "description": "Çekiliş ödülü nedir?",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "sure",
+            "description": "Süre (Örn: 10m, 2h, 1d)",
+            "required": true
+          },
+          {
+            "type": 4,
+            "name": "kazanan",
+            "description": "Kazanan sayısı",
+            "required": true
+          }
+        ],
+        "name": "cekilis",
+        "description": "Sunucuda çekiliş düzenler.",
+        "default_member_permissions": "8589934592",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "temizle-sira",
+        "description": "Tüm şarkı sırasını temizler.",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "hakkinda",
+        "description": "Vortex ekosistemi ve bot hakkında detaylı bilgi verir.",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "komutlar",
+        "description": "Bottaki tüm komutları listeler.",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "ping",
+        "description": "Botun gecikme süresini ölçer.",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "type": 3,
+            "name": "link",
+            "description": "YouTube video linki",
+            "required": true
+          }
+        ],
+        "name": "play",
+        "description": "Bir video linki ile şarkı çalar veya sıraya ekler.",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "reaksiyon-rol-kurulum",
+        "description": "Kullanıcıların emojiye basarak rol alabileceği mesajı oluşturur.",
+        "default_member_permissions": "8",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "ticket-kurulum",
+        "description": "Destek sistemi için giriş mesajını oluşturur.",
+        "default_member_permissions": "8",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "skip",
+        "description": "Çalan şarkıyı atlar ve sıradakine geçer.",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "stop",
+        "description": "Müziği durdurur ve ses kanalından ayrılır.",
+        "type": 1
+      },
+      {
+        "options": [],
+        "name": "ticket-istatistik",
+        "description": "Yetkililerin ilgilendiği ticket sayılarını gösterir.",
+        "default_member_permissions": "268435456",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "type": 3,
+            "name": "baslik",
+            "description": "Ürün adı",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "link",
+            "description": "İndirme/Satış linki (URL)",
+            "required": true
+          }
+        ],
+        "name": "urun-link",
+        "description": "Bir ürünün indirme/satış linkini profesyonel bir kart ile paylaşır.",
+        "default_member_permissions": "8192",
+        "type": 1
+      },
+      {
+        "options": [
+          {
+            "type": 3,
+            "name": "baslik",
+            "description": "Ürün adı/başlığı",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "aciklama",
+            "description": "Ürün açıklaması",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "fiyat",
+            "description": "Ürün fiyatı",
+            "required": true
+          },
+          {
+            "type": 3,
+            "name": "resim",
+            "description": "Ürün resim linki (URL)",
+            "required": false
+          },
+          {
+            "type": 3,
+            "name": "video",
+            "description": "Ürün video linki (YouTube/URL)",
+            "required": false
+          }
+        ],
+        "name": "urun-tanit",
+        "description": "Bir ürünü profesyonel bir kart ile tanıtır.",
+        "default_member_permissions": "8192",
+        "type": 1
+      }
+    ]
+  },
+  "rawError": {
+    "message": "Missing Access",
+    "code": 50001
+  },
+  "code": 50001,
+  "status": 403,
+  "method": "PUT",
+  "url": "https://discord.com/api/v10/applications/1470162853838458923/guilds/1469828793849085975/commands"
+}
