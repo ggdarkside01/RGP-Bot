@@ -66,7 +66,11 @@ module.exports = {
                 const hasLink = /(https?:\/\/[^\s]+)/g.test(message.content);
                 if (hasLink) {
                     const isWhitelisted = config.linkWhitelist.some(link => message.content.includes(link));
-                    if (!isWhitelisted) {
+                    const linkAllowedRoles = config.linkAllowedRoles || [];
+                    const hasBypassRole = message.member?.roles.cache.some(role => linkAllowedRoles.includes(role.id));
+                    const hasBypassPerm = message.member?.permissions.has('ManageMessages');
+
+                    if (!isWhitelisted && !hasBypassRole && !hasBypassPerm) {
                         await message.delete().catch(() => { });
                         const warning = await message.channel.send(`${message.author}, bu sunucuda link paylaşımı yasaktır!`);
                         setTimeout(() => warning.delete().catch(() => { }), 5000);
@@ -105,7 +109,10 @@ module.exports = {
             if (filter.length === 0) return;
 
             const content = message.content.toLowerCase();
-            const hasBadWord = filter.some(word => content.includes(word));
+            const hasBadWord = filter.some(word => {
+                const regex = new RegExp(`(?<=^|[^a-zA-ZçğıöşüÇĞİÖŞÜ])${word}(?=[^a-zA-ZçğıöşüÇĞİÖŞÜ]|$)`, 'iu');
+                return regex.test(content);
+            });
 
             if (hasBadWord) {
                 try {
