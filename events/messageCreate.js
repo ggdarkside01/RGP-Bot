@@ -70,6 +70,13 @@ module.exports = {
                     const hasBypassRole = message.member?.roles.cache.some(role => linkAllowedRoles.includes(role.id));
                     const hasBypassPerm = message.member?.permissions.has(PermissionFlagsBits.ManageMessages) || message.member?.permissions.has(PermissionFlagsBits.Administrator);
 
+                    console.log(`[DEBUG-LINK] User: ${message.author.tag} (${message.author.id})`);
+                    console.log(`[DEBUG-LINK] isWhitelisted: ${isWhitelisted}`);
+                    console.log(`[DEBUG-LINK] hasBypassRole: ${hasBypassRole}`);
+                    console.log(`[DEBUG-LINK] hasBypassPerm: ${hasBypassPerm}`);
+                    console.log(`[DEBUG-LINK] AllowedRolesConfig:`, linkAllowedRoles);
+                    console.log(`[DEBUG-LINK] UserRolesFound:`, message.member?.roles.cache.map(r => r.id));
+
                     if (!isWhitelisted && !hasBypassRole && !hasBypassPerm) {
                         await message.delete().catch(() => { });
                         const warning = await message.channel.send(`${message.author}, bu sunucuda link paylaşımı yasaktır!`);
