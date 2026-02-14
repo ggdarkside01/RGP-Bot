@@ -66,9 +66,17 @@ module.exports = {
                 const hasLink = /(https?:\/\/[^\s]+)/g.test(message.content);
                 if (hasLink) {
                     const isWhitelisted = config.linkWhitelist.some(link => message.content.includes(link));
-                    const linkAllowedRoles = config.linkAllowedRoles || [];
+                    const linkAllowedRoles = (config.linkAllowedRoles || []).filter(id => id.length > 10 && !id.startsWith('ROL_ID'));
                     const hasBypassRole = message.member?.roles.cache.some(role => linkAllowedRoles.includes(role.id));
-                    const hasBypassPerm = message.member?.permissions.has('ManageMessages');
+                    const hasBypassPerm = message.member?.permissions.has(PermissionFlagsBits.ManageMessages);
+
+                    // Debug Logs
+                    console.log(`[LINK-CHECK] User: ${message.author.tag}`);
+                    console.log(`[LINK-CHECK] Whitelisted: ${isWhitelisted}`);
+                    console.log(`[LINK-CHECK] Bypass Role: ${hasBypassRole}`);
+                    console.log(`[LINK-CHECK] Bypass Perm: ${hasBypassPerm}`);
+                    console.log(`[LINK-CHECK] Allowed Roles:`, linkAllowedRoles);
+                    console.log(`[LINK-CHECK] User Roles:`, message.member?.roles.cache.map(r => r.id));
 
                     if (!isWhitelisted && !hasBypassRole && !hasBypassPerm) {
                         await message.delete().catch(() => { });
